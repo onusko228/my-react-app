@@ -1,0 +1,73 @@
+.burger__icon {
+	font-size: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.closed {
+ position: relative;
+ display: flex;
+ width: 30px;
+ height: 4px;
+ background-color: black;
+ transition: all 0.3s ease-in-out;
+ align-items: center;
+}
+
+
+.closed::before, 
+.closed::after {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	background-color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+.closed::after{
+	top: -10px;
+	padding: 0;
+	align-items: center;
+
+}
+
+.closed::before{
+	bottom: -10px;
+	padding: 0;
+	align-items: center;
+}
+
+.open{
+	position: relative;
+	width: 40px;
+	height: 4px;
+	display: block;
+	background-color: transparent;
+}
+
+.open::before,
+.open::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	width: 45px;
+	background-color: black;
+}
+
+.open::before {
+	transform: rotate(45deg) translate(5px, 5px) ;
+	left: -2px;
+	top: -5px;
+}
+.open::after {
+	transform: rotate(-45deg) translate(5px, -5px);
+	left: -2px;
+	top: 9px;
+}
